@@ -1,3 +1,26 @@
+# Resource Gathering : The environment of this game, has grid with 5 rows and 5
+# columns and an agent is initially positioned at home location. The agent begins at the home location and can move
+# 1 square at a time in each of the 4 cardinal directions. The
+# resources are available at the fixed locations in the grid and
+# agents task is to gather either one of the resources or both
+# the resources (gold and gems) and return to home location.
+# Agent receives the reward of +1 for each resource which is
+# returned to the home location. Moreover there are two locations in the environment at which an enemy attack may occur, with a 10% probability. The agent loses any resources
+# currently being carried if any attack occurs and is returned
+# to the home location and receives a penalty of -1. The reward vector is ordered as [enemy, gold, gems] and there are
+# four possible rewards which may be received on entering
+# the home location and also there is zero reward on all other
+# time-steps:
+# • [−1, 0, 0] for being attacked
+# • [0, 1, 0] for returning home with gold but no gems
+# • [0, 0, 1] for returning home with gems but no gold
+# • [0, 1, 1] for returning home with both gold and gems
+# This task is not inherently specified as episodic, but it has
+# a very episodic-like structure, with all rewards being centered on the “home” state; implemented it as episodic
+# for compatibility with the episode-centric Pareto Q-learning
+# algorithm.
+
+
 # The solutions gives pareto front which has rewards related to enemy,gold and gems respectively.
 
 import copy
