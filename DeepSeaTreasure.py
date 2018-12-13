@@ -1,3 +1,30 @@
+# The Deep Sea Treasure Environment : In this game, the
+# environment consists of a grid of 10 rows and 11 columns
+# as shown in Figure 1. The diving vessel is controlled by the
+# agent to search for undersea treasure. Treasure with varying
+# values is located at multiple locations. One objective is to
+# minimize the time taken to reach the treasure and another
+# objective is to maximize the value of the treasure retrieved.
+# As this is the episodic task, it starts with the vessel in the
+# top row of the first column, and terminates when a treasure
+# location is reached or after 1000 actions have been executed.
+# Agent can move either left, right, up or down per square in
+# each time step.
+# The reward received by agent is 2-element vector for each
+# turn. The first element in the vector is the penalty for time
+# consumed, which equals -1 on all turns while second element is 
+# the value of the treasure retrieved which varies according to 
+# the treasure location and it is 0 for other locations
+# without any treasure.
+# An interesting property of this environment is that only
+# 2 of the 10 Pareto-optimal policies (one for a minimumlength path to each treasure) are on the convex hull of the
+# Pareto front; this means that only those two can be the
+# globally-optimal policies for linear scalarization functions.
+# This poses problems for learning algorithms that try to use
+# different linear scalarizations to learn new Pareto-optimal
+# policies; though they may discover non-convex-hull policies incidentally, they will only converge on the convex-hull
+# ones.
+
 # The solution gives pareto front with rewards related to time and treasure respectively.
 
 import time
