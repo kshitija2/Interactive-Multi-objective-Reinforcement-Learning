@@ -1,6 +1,6 @@
 # The Deep Sea Treasure Environment : In this game, the
-# environment consists of a grid of 10 rows and 11 columns
-# as shown in Figure 1. The diving vessel is controlled by the
+# environment consists of a grid of 10 rows and 11 columns.
+# The diving vessel is controlled by the
 # agent to search for undersea treasure. Treasure with varying
 # values is located at multiple locations. One objective is to
 # minimize the time taken to reach the treasure and another
